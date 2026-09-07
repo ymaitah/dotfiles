@@ -7,7 +7,7 @@ one command.
 ## New machine
 
 ```sh
-git clone https://github.com/yousefm/dotfiles.git ~/dotfiles
+git clone https://github.com/ymaitah/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./bootstrap.sh
 ```
@@ -41,17 +41,31 @@ live config (and vice-versa) — commit changes from here.
 
 ## macOS settings
 
-`macos-settings.sh` only writes settings that differ from macOS defaults, so it
-mirrors this machine rather than imposing an opinionated baseline. It currently
-covers:
+`macos-settings.sh` captures selected preferences explicitly stored on this Mac,
+last checked **2026-09-07**. Stored values are not necessarily customizations:
+some match macOS defaults. Unset settings (including keyboard repeat timing,
+Dock autohide, and Finder hidden-file visibility) are left to the destination
+Mac. This is not a complete system backup. It currently covers:
 
 - **Appearance** — fixed Dark mode.
 - **Dock** — icon size 59, no recent apps, bottom-right hot corner → Quick Note.
 - **Finder** — List view, new windows open Downloads, no empty-trash warning,
   hidden "Recent Tags".
-- **Trackpad/pointer** — tap to click, faster tracking speed.
-- **Screenshots** — saved to `~/My Drive/Pictures/Screenshots` (if Google Drive
-  is mounted).
+- **Trackpad/pointer** — tap to click, tracking speed 0.875, secondary click,
+  scrolling, zoom/rotation/swipe gestures, click pressure, and Force Click.
+- **Keyboard/text** — automatic capitalization and period substitution enabled.
+- **Screenshots** — clipboard destination and window capture mode; removes the
+  obsolete Google Drive save-location preference.
+
+Dock app order is intentionally excluded. Accounts, credentials, permissions,
+and device-specific configuration must be set up separately. macOS versions
+may interpret preferences differently; log out after applying and check System
+Settings on the destination Mac.
+
+The Brewfile includes the existing app selections plus currently installed
+top-level tools and casks. Automatically installed library dependencies are
+omitted. Shell and terminal configs were compared with their live copies;
+the Bun completion path uses the destination user's home directory.
 
 ### Re-capturing settings
 

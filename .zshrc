@@ -22,7 +22,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # Bun installation & completions
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-[ -s "/Users/yousefm/.bun/_bun" ] && source "/Users/yousefm/.bun/_bun"
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
 # ==============================================================================
 # 4. HOMEBREW PLUGINS (These must remain at the very bottom)

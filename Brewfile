@@ -5,6 +5,13 @@ brew "git"
 brew "gh"
 # Cross-shell prompt for astronauts
 brew "starship"
+brew "flyctl"
+brew "icarus-verilog"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+cask "background-music"
+cask "claude"
+cask "pearcleaner"
 cask "font-jetbrains-mono-nerd-font"
 # GPU-based terminal emulator
 cask "kitty"
